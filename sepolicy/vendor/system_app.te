@@ -3,6 +3,9 @@ r_dir_file(system_app, sysfs_battery_supply)
 
 allow system_app proc_pagetypeinfo:file r_file_perms;
 
+allow system_app hal_mlipay_hwservice:hwservice_manager find;
+binder_call(system_app, hal_mlipay_default)
+
 # Incremental
 get_prop(system_app, incremental_prop)
 # allow apps like settings to check the file signature of an apk installed on
