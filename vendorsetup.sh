@@ -10,6 +10,10 @@ git clone https://github.com/askthekaif/android_xiaomi_sky_kernel.git device/xia
 echo "Cloning vendor repository..."
 git clone https://github.com/askthekaif/android_vendor_xiaomi_sky.git vendor/xiaomi/sky
 
+# Clone the firmware source
+echo "Cloning firmware repository..."
+git clone https://github.com/xiaomi-sm4450-sky/android_vendor_xiaomi_sky-firmware.git -b OS2.0.9.0.VMWEUXM vendor/xiaomi/sky-firmware
+
 # Clone the dolby repository
 echo "Cloning dolby hardware repository..."
 git clone https://github.com/askthekaif/android_hardware_dolby hardware/dolby
