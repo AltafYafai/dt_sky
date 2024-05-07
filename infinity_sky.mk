@@ -24,6 +24,7 @@ $(call inherit-product, $(DEVICE_PATH)/device.mk)
 $(call inherit-product, vendor/xiaomi/sky/sky-vendor.mk)
 
 # Infinity-X Flags
+TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_BOOT_ANIMATION_RES := 1080
 INFINITY_MAINTAINER := "kAiF"
 WITH_GAPPS := true
