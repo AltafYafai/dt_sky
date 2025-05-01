@@ -69,6 +69,9 @@ persist.vendor.ssr.enable_ramdumps=0
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
 
+# Increase max cached processes
+activity_manager.max_cached_processes=64
+
 # Infinity-X
 ro.infinity.soc=Snapdragon 4 Gen 2
 ro.infinity.battery=5000 mAh
