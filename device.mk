@@ -524,4 +524,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
-
+# Signed
+-include vendor/lineage-priv/keys/keys.mk
