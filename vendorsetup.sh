@@ -10,6 +10,10 @@ git clone https://github.com/askthekaif/android_xiaomi_sky_kernel.git device/xia
 echo "Cloning vendor repository..."
 git clone https://github.com/askthekaif/android_vendor_xiaomi_sky.git vendor/xiaomi/sky
 
+# Clone the dolby repository
+echo "Cloning dolby hardware repository..."
+git clone https://github.com/askthekaif/android_hardware_dolby hardware/dolby
+
 # Clone the hardware repository
 echo "Cloning hardware repository..."
 git clone https://github.com/PixelOS-AOSP/hardware_xiaomi.git hardware/xiaomi
