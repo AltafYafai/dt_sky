@@ -6,6 +6,9 @@ media.stagefright.audio.deep=false
 ro.sf.blurs_are_expensive=0
 ro.surface_flinger.supports_background_blur=1
 
+# eBPF
+ro.bpf.kver_override=5.10.239
+
 # Fuse
 persist.sys.fuse.passthrough.enable=true
 
