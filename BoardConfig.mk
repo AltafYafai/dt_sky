@@ -89,7 +89,7 @@ $(call soong_config_set, qtilocation, feature_nhz, false)
 HWUI_COMPILE_FOR_PERF := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_sky
+$(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH):init_xiaomi_sky)
 
 # Kernel
 BOARD_KERNEL_PAGESIZE := 4096
