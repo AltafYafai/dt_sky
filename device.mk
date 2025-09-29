@@ -271,10 +271,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml
 
 # Lineage Health
-$(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
-
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
+
+$(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
+$(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/qcom-battery/input_suspend)
+$(call soong_config_set,lineage_health,charging_control_charging_enabled,0)
+$(call soong_config_set,lineage_health,charging_control_charging_disabled,1)
 
 # NFC
 PRODUCT_COPY_FILES += \
