@@ -9,3 +9,7 @@ unix_socket_connect(hal_audio_default, property, init)
 unix_socket_connect(hal_audio_default, property, hal_sensors_default)
 hal_client_domain(hal_audio_default, hal_dms)
 set_prop(hal_audio_default, vendor_audio_prop)
+
+# Dolby denial fix
+allow hal_audio_default vendor_audio_prop:file { read open getattr };
+allow hal_audio_default property_socket:sock_file write;
