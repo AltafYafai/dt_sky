@@ -12,10 +12,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 # Configure full_base_telephony.mk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit common Infinity-X configurations
-$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+# Inherit common rom configurations
+$(call inherit-product, vendor/euclid/config/common_full_phone.mk)
 
-$(call inherit-product, vendor/infinity/config/BoardConfigReservedSize.mk)
+$(call inherit-product, vendor/euclid/config/BoardConfigReservedSize.mk)
 
 # Inherit device configurations
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
@@ -23,27 +23,19 @@ $(call inherit-product, $(DEVICE_PATH)/device.mk)
 # Inherit from the proprietary version
 $(call inherit-product, vendor/xiaomi/sky/sky-vendor.mk)
 
-# Infinity-X Flags
-TARGET_BOOTANIMATION_HALF_RES := true
-TARGET_BOOT_ANIMATION_RES := 1080
-INFINITY_MAINTAINER := "TopexGuy"
-WITH_GAPPS := true
-TARGET_SHIPS_FULL_GAPPS := true
-USE_PIXEL_CHARGER := true
-
-PRODUCT_SYSTEM_PROPERTIES += \
-    ro.infinity.soc=Snapdragon_4_Gen_2 \
-    ro.infinity.battery=5000mAh \
-    ro.infinity.display=1080x2460@90Hz \
-    ro.infinity.camera=50MP+8MP+2MP \
-    ro.product.marketname=sky
-
+EOS_BUILD := true
 DEVICE_PACKAGE_OVERLAYS += \
 	$(DEVICE_PATH)/overlay-lineage
+WITH_GMS_COMMS_SUITE := true
+TARGET_INCLUDE_PIXEL_LAUNCHER := true
+TARGET_PREBUILT_LAWNICONS := true
+TARGET_BUILD_DOTGALLERY := true
+EUCLID_MAINTAINER := TopexGuy
+EUCLID_DEVICE := sky
+EUCLID_PROCESSOR := Snapdragon_4_Gen_2
 
-## Device identifier
 PRODUCT_DEVICE := sky
-PRODUCT_NAME := infinity_sky
+PRODUCT_NAME := euclid_sky
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := 23076RN4BI
 PRODUCT_MANUFACTURER := Xiaomi
