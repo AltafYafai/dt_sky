@@ -98,8 +98,42 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
     disable_dma32=on \
+
+ifeq ($(INF_BUILD),true)
+BOARD_KERNEL_CMDLINE += \
+    swinfo.fingerprint=$(INFINITY_VERSION) \
+    mtdoops.fingerprint=$(INFINITY_VERSION)
+endif
+
+ifeq ($(CLV_BUILD),true)
+BOARD_KERNEL_CMDLINE += \
+    swinfo.fingerprint=$(CLOVER_VERSION) \
+    mtdoops.fingerprint=$(CLOVER_VERSION)
+endif
+
+ifeq ($(VOS_BUILD),true)
+BOARD_KERNEL_CMDLINE += \
+    swinfo.fingerprint=$(VOLTAGE_VERSION) \
+    mtdoops.fingerprint=$(VOLTAGE_VERSION)
+endif
+
+ifeq ($(EOS_BUILD),true)
+BOARD_KERNEL_CMDLINE += \
+     swinfo.fingerprint=$(EUCLID_VERSION) \
+     mtdoops.fingerprint=$(EUCLID_VERSION)
+endif
+
+ifeq ($(LOS_BUILD),true)
+BOARD_KERNEL_CMDLINE += \
     swinfo.fingerprint=$(LINEAGE_VERSION) \
     mtdoops.fingerprint=$(LINEAGE_VERSION)
+endif
+
+ifeq ($(ALP_BUILD),true)
+BOARD_KERNEL_CMDLINE += \
+    swinfo.fingerprint=$(ALPHA_VERSION) \
+    mtdoops.fingerprint=$(ALPHA_VERSION)
+endif
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
@@ -255,7 +289,7 @@ DEVICE_MANIFEST_RAVELIN_FILES := \
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/configs/vintf/vendor_framework_compatibility_matrix.xml \
     $(DEVICE_PATH)/configs/vintf/xiaomi_framework_compatibility_matrix.xml \
-    vendor/infinity/config/device_framework_matrix.xml
+
 DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/framework_manifest.xml
 ODM_MANIFEST_SKUS += hceese hcesim hcesim1 hcesim1ese hcesimese
 ODM_MANIFEST_HCEESE_FILES := $(DEVICE_PATH)/configs/vintf/manifest_hceese.xml
