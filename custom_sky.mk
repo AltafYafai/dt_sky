@@ -13,9 +13,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit common rom configurations
-$(call inherit-product, vendor/euclid/config/common_full_phone.mk)
+$(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
-$(call inherit-product, vendor/euclid/config/BoardConfigReservedSize.mk)
+$(call inherit-product, vendor/custom/config/BoardConfigReservedSize.mk)
 
 # Inherit device configurations
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
@@ -23,19 +23,16 @@ $(call inherit-product, $(DEVICE_PATH)/device.mk)
 # Inherit from the proprietary version
 $(call inherit-product, vendor/xiaomi/sky/sky-vendor.mk)
 
-EOS_BUILD := true
+TARGET_BOOTANIMATION_HALF_RES := true
+TARGET_BOOT_ANIMATION_RES := 1080
+
+LOS_BUILD := true
 DEVICE_PACKAGE_OVERLAYS += \
 	$(DEVICE_PATH)/overlay-lineage
-WITH_GMS_COMMS_SUITE := true
-TARGET_INCLUDE_PIXEL_LAUNCHER := true
-TARGET_PREBUILT_LAWNICONS := true
-TARGET_BUILD_DOTGALLERY := true
-EUCLID_MAINTAINER := 𝚂αяιм_𝚁αѕσσℓ
-EUCLID_DEVICE := sky
-EUCLID_PROCESSOR := Snapdragon™_4_Gen_2
 
+## Device identifier
 PRODUCT_DEVICE := sky
-PRODUCT_NAME := euclid_sky
+PRODUCT_NAME := custom_sky
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := 23076RN4BI
 PRODUCT_MANUFACTURER := Xiaomi

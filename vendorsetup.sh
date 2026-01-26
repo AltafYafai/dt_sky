@@ -20,7 +20,7 @@ git clone https://codeberg.org/askthekaif/android_vendor_xiaomi_sky-firmware-af.
 
 # Clone the dolby repository
 echo "Cloning dolby hardware repository..."
-git clone https://github.com/anonytry/hardware_dolby hardware/dolby
+git clone https://github.com/anonytry/android_hardware_dolby.git hardware/dolby
 
 # Clone the hardware repository
 echo "Cloning hardware repository..."

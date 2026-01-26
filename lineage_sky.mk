@@ -18,7 +18,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 	$(DEVICE_PATH)/overlay-lineage
 
 LOS_BUILD := true
-USE_RESERVED_SIZE := true
+USE_RESERVED_SIZE := false
 TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_BOOT_ANIMATION_RES := 1080
 
@@ -26,15 +26,17 @@ ifeq ($(AXION),true)
 USE_RESERVED_SIZE := true
 AXION_CAMERA_REAR_INFO := 50,2
 AXION_CAMERA_FRONT_INFO := 8
-AXION_MAINTAINER := TopexGuy
-AXION_PROCESSOR := Snapdragon_4_Gen_2
+AXION_MAINTAINER := 𝚂αяιм_𝚁αѕσσℓ
+AXION_PROCESSOR := Snapdragon™_4_Gen_2
 endif
 
 ifeq ($(LUNARIS),true)
 USE_RESERVED_SIZE := true
 WITH_GMS := true
+DEVICE_PACKAGE_OVERLAYS += \
+	$(DEVICE_PATH)/overlay-luna
 PRODUCT_SYSTEM_PROPERTIES += \
-    ro.paranoid.maintainer=TopexGuy
+    ro.paranoid.maintainer="𝚂αяιм 𝚁αѕσσℓ"
 endif
 
 ifeq ($(AVIUM),true)
@@ -45,13 +47,13 @@ AVIUM_VERSION_APPEND_TIME_OF_DAY := false
 # # Google IMS
 # TARGET_INCLUDE_GOOGLEIME := true
 # TARGET_GOOGLEIME_OVERRIDE_IME := true
-AVIUM_MAINTAINER := TopexGuy
+AVIUM_MAINTAINER := 𝚂αяιм_𝚁αѕσσℓ
 endif
 
 ifeq ($(SAKURA),true)
 USE_RESERVED_SIZE := true
 SAKURA_OFFICIAL := true
-SAKURA_MAINTAINER := TopexGuy
+SAKURA_MAINTAINER := 𝚂αяιм_𝚁αѕσσℓ
 SAKURA_BUILD_TYPE := gapps
 endif
 
@@ -67,9 +69,9 @@ endif
 ifeq ($(RISING),true)
 USE_RESERVED_SIZE := true
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    RisingChipset="Snapdragon 4 Gen 2" \
-    RisingMaintainer="TopexGuy"
-RISING_MAINTAINER := TopexGuy
+    RisingChipset="Snapdragon™ 4 Gen 2" \
+    RisingMaintainer="𝚂αяιм 𝚁αѕσσℓ"
+RISING_MAINTAINER := 𝚂αяιм_𝚁αѕσσℓ
 TARGET_ENABLE_BLUR := true
 TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
 WITH_GMS := true

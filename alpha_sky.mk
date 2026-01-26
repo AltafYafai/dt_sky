@@ -58,7 +58,7 @@ TARGET_INCLUDE_MATLOG := false
 
 # Maintainer
 ALPHA_BUILD_TYPE := Unofficial
-ALPHA_MAINTAINER := TopexGuy
+ALPHA_MAINTAINER := 𝚂αяιм_𝚁αѕσσℓ
 
 ## Device identifier
 PRODUCT_DEVICE := sky
