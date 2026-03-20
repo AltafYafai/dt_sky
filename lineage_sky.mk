@@ -53,7 +53,7 @@ WITH_GMS := true
 DEVICE_PACKAGE_OVERLAYS += \
 	$(DEVICE_PATH)/overlay-luna
 PRODUCT_SYSTEM_PROPERTIES += \
-    ro.paranoid.maintainer="𝚂αяιм 𝚁αѕσσℓ"
+    ro.paranoid.maintainer="Altaf Yafai"
 endif
 
 ifeq ($(AVIUM),true)
