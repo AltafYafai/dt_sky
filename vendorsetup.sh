@@ -8,7 +8,7 @@ rm -rf vendor/bcr && rm -rf vendor/extras/bcr && git clone https://github.com/an
 
 # Clone the kernel source
 echo "Cloning kernel repository..."
-git clone https://github.com/anonytry/kt_sky.git -b 16.2 device/xiaomi/sky-kernel
+git clone https://github.com/altafyafai7/android_kernel_xiaomi_sky_upstream.git -b oss-upstream device/xiaomi/sky-kernel
 
 # Clone the vendor source
 echo "Cloning vendor repository..."
